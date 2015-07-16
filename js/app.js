@@ -50,7 +50,10 @@ function showName(){
 
 	var windowSize = getWindowSize();
 
-	cxt.font="lighter 70px Arial";
+	canvas.width=windowSize.width;
+	canvas.height=windowSize.height;
+
+	cxt.font="lighter 100px batang";
 	cxt.textAlign = "center";
 	cxt.textBaseline = "middle";
 	cxt.fillStyle = '#fff';
@@ -59,21 +62,21 @@ function showName(){
 	var y = windowSize.height/2;
 	(function(){
 		var id0_5 = setInterval(function(){
-			cxt.clearRect(x-70,y-70,300,300);
+			cxt.clearRect(x-100,y-100,400,400);
 			cxt.fillText(''+(i/100).toFixed(2), x, y);
 			i++;
 			if(i == 5){
 				clearInterval(id0_5);
 				(function(){
 					var id0_95 = setInterval(function(){
-						cxt.clearRect(x-70,y-70,300,300);
+						cxt.clearRect(x-100,y-100,400,400);
 						cxt.fillText(''+(i/100).toFixed(2), x, y);
 						i++;
 						if(i==95){
 							clearInterval(id0_95);
 							(function(){
 								var id100 = setInterval(function(){
-									cxt.clearRect(x-70,y-70,300,300);
+									cxt.clearRect(x-100,y-100,400,400);
 									if(i==100){
 										cxt.fillText(''+(i/100).toFixed(0), x, y);	
 									}else{
@@ -84,13 +87,13 @@ function showName(){
 										clearInterval(id100);
 										(function(){
 											setTimeout(function(){
-												cxt.clearRect(x-70,y-70,300,300);
+												cxt.clearRect(x-100,y-100,400,400);
 												cxt.fillText('ZTO', x, y);
 												setTimeout(function(){
-													cxt.clearRect(x-70,y-70,300,300);
+													cxt.clearRect(x-100,y-100,400,400);
 													cxt.fillText('Zero To One', x, y);
 													setTimeout(function(){
-														cxt.font = 'lighter 32px Arial'; 
+														cxt.font = 'bold 32px batang'; 
 														cxt.fillText('We are on the way of ZTO!', x, y+140);
 													},1000);
 												},1000);
